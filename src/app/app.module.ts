@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { animate } from './services/animate.service';
 
 import { AppComponent } from './app.component';
 import { LoadingComponent } from './presentation/loading/loading.component';
@@ -33,4 +34,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    // extend jquery for animate.css
+    animate();
+  }
+}
