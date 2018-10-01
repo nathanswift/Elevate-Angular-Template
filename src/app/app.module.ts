@@ -2,10 +2,30 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { LoadingComponent } from './presentation/loading/loading.component';
+import { MainComponent } from './presentation/main/main.component';
+import { AboutComponent } from './presentation/about/about.component';
+import { ServicesComponent } from './presentation/services/services.component';
+import { DevelopmentComponent } from './presentation/development/development.component';
+import { DesignComponent } from './presentation/design/design.component';
+import { SolutionsComponent } from './presentation/solutions/solutions.component';
+import { PortfolioComponent } from './presentation/portfolio/portfolio.component';
+import { ProjectsComponent } from './presentation/projects/projects.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoadingComponent,
+    MainComponent,
+    AboutComponent,
+    ServicesComponent,
+    DevelopmentComponent,
+    DesignComponent,
+    SolutionsComponent,
+    PortfolioComponent,
+    ProjectsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule

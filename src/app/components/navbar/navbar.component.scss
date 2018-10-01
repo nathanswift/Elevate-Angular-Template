@@ -1,0 +1,17 @@
+@import "../../../styles/colors.theme.scss";
+@import "../../../styles/style.theme.scss";
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    div {
+        height: 50px;
+        width: 50px;
+        background-image: url("http://via.placeholder.com/250x250");
+        background-size: cover;
+        margin: 15px 20px;
+        cursor: $cursor;
+    }
+}
