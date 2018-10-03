@@ -13,6 +13,8 @@ import { SolutionsComponent } from './presentation/solutions/solutions.component
 import { PortfolioComponent } from './presentation/portfolio/portfolio.component';
 import { ProjectsComponent } from './presentation/projects/projects.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HeaderComponent } from './components/header/header.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     SolutionsComponent,
     PortfolioComponent,
     ProjectsComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule

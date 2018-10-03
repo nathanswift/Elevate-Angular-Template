@@ -8,18 +8,45 @@ import $ from 'jquery';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { 
+
+  constructor() {
   }
 
   toggle() {
-    console.log(true);
+    const $menu = $('ul#nav-btn-drop');
+    $menu.css({
+      display: 'flex',
+    }).animateCss('fadeIn', () => {
+      $menu.mouseleave(() => {
+        $menu.animateCss('fadeOut', () => {
+          $(window).off();
+          $menu.css({
+            display: 'none'
+          });
+        });
+      });
+    });
+  }
+
+  scroll() {
+
+  }
+
+  link() {
   }
 
   jump(elem) {
-    $(elem.path[0]).animateCss('tada');
+    $(elem.path[0]).animateCss('pulse');
+  }
+
+  navLink() {
+    document.getElementById('navBtnDrop');
   }
 
   ngOnInit() {
+    $('li').hover(function() {
+      $(this).animateCss('flipInX');
+    });
   }
 
 }

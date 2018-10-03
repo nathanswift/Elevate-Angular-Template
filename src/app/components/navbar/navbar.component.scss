@@ -15,3 +15,39 @@ nav {
         cursor: $cursor;
     }
 }
+
+ul {
+
+    display: none;
+    list-style-type: none;
+    flex-direction: column;
+    vertical-align: text-bottom;
+    text-align: right;
+    position: fixed;
+    width: 200px;
+    left: 24px;
+    color: $light;
+    background-color: $dark;
+    margin: 0px;
+    padding: 15px 0px;
+    font-size: $small;
+    top: 5px;
+    li {
+        flex: 1;
+        cursor: $cursor;
+        letter-spacing: $medium;
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+    li:hover {
+        color: $light * 1.75;
+    }
+    li:not(:last-child)::after {
+        display: block;
+        height: 1px;
+        width: 100%;
+        margin: 10px auto 15px auto;
+        background-color: #fff;
+        content: "";
+    }
+}
