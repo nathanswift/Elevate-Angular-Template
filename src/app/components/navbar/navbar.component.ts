@@ -28,10 +28,6 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  scroll() {
-
-  }
-
   link() {
   }
 
