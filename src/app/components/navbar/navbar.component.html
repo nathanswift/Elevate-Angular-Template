@@ -1,13 +1,11 @@
-<div ng-controller="bgScroll" >
-  <ul id="nav-btn-drop">
-    <li (click)="link()" data-target="#">Home</li>
-    <li (click)="link()" data-target="#">About</li>
-    <li (click)="link()" data-target="#">Services</li>
-    <li (click)="link()" data-target="#">Projects</li>
-    <li (click)="link()" data-target="#">Portfolio</li>
-    <li (click)="link()" data-target="#">Contact</li>
-  </ul>
-  <nav>
-    <div (mouseover)="toggle()" (mouseover)="jump($event)" class="animated fadeIn"></div>
-  </nav>
-</div>
+<ul id="nav-btn-drop">
+  <li (click)="link()" data-target="#">Home</li>
+  <li (click)="link()" data-target="#">About</li>
+  <li (click)="link()" data-target="#">Services</li>
+  <li (click)="link()" data-target="#">Projects</li>
+  <li (click)="link()" data-target="#">Portfolio</li>
+  <li (click)="link()" data-target="#">Contact</li>
+</ul>
+<nav>
+  <object (mouseover)="toggle()" id="navbar-logo" type="image/svg+xml" data="./assets/images/mountain.svg"></object>
+</nav>

@@ -8,18 +8,27 @@ import $ from 'jquery';
 })
 export class NavbarComponent implements OnInit {
 
+  scrolled: boolean = false;
+  count: number = 0;
 
   constructor() {
   }
 
   toggle() {
+    $('#navbar-logo').fadeOut();
     const $menu = $('ul#nav-btn-drop');
     $menu.css({
-      display: 'flex',
+      display: 'flex'
     }).animateCss('fadeIn', () => {
+      $menu.animate({
+       fontSize: '4.25vh'
+      }, 500);
       $menu.mouseleave(() => {
+        $menu.animate({
+          fontSize: '1em'
+         }, 500);
         $menu.animateCss('fadeOut', () => {
-          $(window).off();
+          $('#navbar-logo').fadeIn();
           $menu.css({
             display: 'none'
           });
@@ -29,30 +38,36 @@ export class NavbarComponent implements OnInit {
   }
 
   link() {
-  }
-  
-  bgScroll($scope) {
-    $(window).bind('scroll', () => {
-    $scope.scroll = window.pageYOffset;
-    $scope.height = document.getElementById('nav-btn-drop').offsetHeight;
-    $scope.a = $scope.scroll / $scope.height;
-
-    $scope.$apply();
-    });
+    console.log('Link Works!');
   }
 
   jump(elem) {
     $(elem.path[0]).animateCss('pulse');
   }
 
-  navLink() {
-    document.getElementById('navBtnDrop');
-  }
-
   ngOnInit() {
-    $('li').hover(function() {
+    $('li').hover(function () {
       $(this).animateCss('flipInX');
     });
+    const $nav = $('app-navbar');
+    $(window).bind('scroll', () => {
+      this.scrolled = true;
+      this.count = 0;
+      if (window.scrollY > 100) {
+        $nav.fadeOut();
+      } else {
+        $nav.fadeIn();
+      }
+    });
+    setInterval(() => {
+      if (!this.scrolled && this.count === 1) {
+        $nav.fadeIn();
+      } else if (!this.scrolled) {
+        this.count++;
+      } else if (this.scrolled) {
+        this.scrolled = false;
+      }
+    }, 1000);
   }
 
 }
