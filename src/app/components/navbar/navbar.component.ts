@@ -30,6 +30,16 @@ export class NavbarComponent implements OnInit {
 
   link() {
   }
+  
+  bgScroll($scope) {
+    $(window).bind('scroll', () => {
+    $scope.scroll = window.pageYOffset;
+    $scope.height = document.getElementById('nav-btn-drop').offsetHeight;
+    $scope.a = $scope.scroll / $scope.height;
+
+    $scope.$apply();
+    });
+  }
 
   jump(elem) {
     $(elem.path[0]).animateCss('pulse');
