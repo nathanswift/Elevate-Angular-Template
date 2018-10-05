@@ -1,3 +1,62 @@
-h2 {
-    display: flex;
+@import "../../../styles/colors.theme.scss";
+@import "../../../styles/style.theme.scss";
+
+.col-1 {
+  display: flex;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  vertical-align: center;
+  transform-origin: left;
+  transform: translate(50%, 600px) rotateZ(-45deg);
+  width: 600px;
+  height: 200px;
+  margin: 1px 1px;
+  cursor: pointer;
+
+  a:hover {
+    cursor: pointer;
+    background-color: $light;
+    color: $dark;
+  }
+
+  .box-1 {
+    order: 2;
+    flex: 1;
+    border: 1px $light solid;
+    transform: scale(1.5, 1.5)
+  }
+
+  .box-2 {
+    order: 1;
+    flex: 1;
+    border: 1px $light solid;
+    transform: scale(.5, .5) translate(0px, 200px);
+  }
+
+  .box-3 {
+    order: 3;
+    flex: 1;
+    border: 1px $light solid;
+    transform: scale(.5, .5) translate(0px, -200px);
+  }
+
+  h2 {
+    font-size: 32pt;
+    transform: rotateZ(45deg) scale(.75) translate(10px, 27.5px)
+  }
+
+  p {
+    display: table;
+    transform: rotateZ(45deg) scale(.65) translate(-50px, -125px);
+  }
+
+  h1 {
+    display: table;
+    transform: rotateZ(45deg) scale(1) translate(-20px, 0px);
+    width: 50%;
+    height: 75%;
+  }
+
+
 }
