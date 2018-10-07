@@ -37,13 +37,13 @@ export class HeaderComponent implements OnInit {
 
     $(function () {
       $(window).scroll(function () {
-        if ($(window).scrollTop() < document_height/2) {
+        if ($(window).scrollTop() < document_height/3) {
           const scroll_position = $(window).scrollTop();
-          const object_position_right = window_width - window_width * (scroll_position / document_height);
+          const object_position_right = window_width/1.67 - window_width * (scroll_position / document_height);
           $('#header').css({
-            'left': object_position_right
+            'left': object_position_right,
           });
-        } else if ($(window).scrollTop() > document_height/2) {
+        } else if ($(window).scrollTop() > document_height/3) {
           console.log(true);
         }
       });
