@@ -14,6 +14,7 @@ import { PortfolioComponent } from './presentation/portfolio/portfolio.component
 import { ProjectsComponent } from './presentation/projects/projects.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ScrollComponent } from './components/scroll/scroll.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HeaderComponent } from './components/header/header.component';
     PortfolioComponent,
     ProjectsComponent,
     NavbarComponent,
-    HeaderComponent
+    HeaderComponent,
+    ScrollComponent
   ],
   imports: [
     BrowserModule

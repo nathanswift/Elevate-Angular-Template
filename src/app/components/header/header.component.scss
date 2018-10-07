@@ -3,12 +3,14 @@
 
 .col-1 {
   display: flex;
-  position: relative;
+  position: fixed;
+  top: 50vh;
+  right: 12%;
   text-align: center;
   justify-content: center;
   vertical-align: center;
   transform-origin: left;
-  transform: translate(50%, 600px) rotateZ(-45deg);
+  transform: scale(.9) rotateZ(-45deg);
   width: 600px;
   height: 200px;
   margin: 1px 1px;
@@ -16,29 +18,36 @@
 
   a:hover {
     cursor: pointer;
-    background-color: $light;
+    z-index: 1;
+    background: rgba(15, 15, 15, .3);
+    border: $dark;
     color: $dark;
   }
 
-  .box-1 {
-    order: 2;
-    flex: 1;
+  .box {
     border: 1px $light solid;
+    flex: 1;
+  }
+
+  #box-1 {
     transform: scale(1.5, 1.5)
   }
 
-  .box-2 {
-    order: 1;
-    flex: 1;
-    border: 1px $light solid;
+  #box-2 {
     transform: scale(.5, .5) translate(0px, 200px);
   }
 
-  .box-3 {
-    order: 3;
-    flex: 1;
-    border: 1px $light solid;
+  #box-3 {
     transform: scale(.5, .5) translate(0px, -200px);
+  }
+
+  h2, p {
+    color: $white;
+  }
+
+  h2:hover,
+  p:hover {
+    color: $light;
   }
 
   h2 {
@@ -52,11 +61,25 @@
   }
 
   h1 {
-    display: table;
+    color: $white;
     transform: rotateZ(45deg) scale(1) translate(-20px, 0px);
     width: 50%;
     height: 75%;
   }
+  
+  h1:hover {
+    color: $dark * .2;
+  }
 
+}
 
+#object {
+  position: fixed;
+  right: 0;
+  top:20%;
+  height: 30px;
+  width: 30px;
+  background: transparent;
+  border: 1px $light solid;
+  transform: rotateZ(45deg)
 }

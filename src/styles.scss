@@ -7,8 +7,11 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh;
-    background-color: $dark;
+    height: 2000px;
+    background-image: url("../src/assets/images/roof2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     color: $light;
-    font-family: 'Abel';
+    font-family: "Abel";
 }
