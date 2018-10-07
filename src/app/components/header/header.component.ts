@@ -41,8 +41,11 @@ export class HeaderComponent implements OnInit {
           const scroll_position = $(window).scrollTop();
           const object_position_right = window_width/1.67 - window_width * (scroll_position / document_height);
           $('#header').css({
-            'left': object_position_right,
+            'left': object_position_right
           });
+          $('#object').css({
+            'left': object_position_right
+          })
         } else if ($(window).scrollTop() > document_height/3) {
           console.log(true);
         }
