@@ -1,6 +1,29 @@
-img {
-    height: 100px;
-    width: 50px;
-    display: flex;
-    transform: scale(1.2) translate(40vw, 150vh);
+@import "../../../styles/colors.theme.scss";
+@import "../../../styles/style.theme.scss";
+
+div {
+  vertical-align: middle;
+  justify-content: center;
+  top: 85%;
+  left: 50%;
+}
+
+div:hover {
+  animation: 'pulse'2s infinite;
+}
+
+
+.container {
+  display: flex;
+  height: 100px;
+  width: 50px;
+  position: fixed;
+}
+
+p {
+  position: absolute;
+  margin-top: 60px;
+  color: $white;
+  width: 150px;
+  text-align: center;
 }

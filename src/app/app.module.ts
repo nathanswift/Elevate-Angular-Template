@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { animate } from './services/animate.service';
+import { scrolling } from './services/scrolling.service';
 
 import { AppComponent } from './app.component';
 import { LoadingComponent } from './presentation/loading/loading.component';
@@ -45,5 +46,7 @@ export class AppModule {
   constructor() {
     // extend jquery for animate.css
     animate();
+    // controlls for scrolling
+    scrolling();
   }
 }

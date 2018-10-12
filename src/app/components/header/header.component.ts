@@ -17,40 +17,37 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-follow() {
-  $(document).mousemove(function (e) {
-    $('.follow').offset({
-      left: e.pageX,
-      top: e.pageY + 20
+  follow() {
+    $(document).mousemove(function (e) {
+      $('.follow').offset({
+        left: e.pageX,
+        top: e.pageY + 20
+      });
     });
-  });
-}
+  }
 
   link() {
     console.log('Link Works');
   }
 
+  headerScroll() {
+    const window_width = $(window).width() - $('.col-1').width();
+    const document_height = $(document).height() - $(window).height();
+
+    $(window).scroll(function () {
+      if ($(window).scrollTop() < document_height / 3) {
+        const scroll_position = $(window).scrollTop();
+        const header_position_right = window_width - window_width * (scroll_position / document_height);
+        $('.col-1').css({
+          display: 'flex',
+          'left': header_position_right
+        });
+      } 
+    });
+  }
 
   ngOnInit() {
     this.follow();
-
-    const window_width = $(window).width() - $('.col-1').width();
-
-    const document_height = $(document).height() - $(window).height();
-
-    $(function () {
-      $(window).scroll(function () {
-        if ($(window).scrollTop() < document_height / 3) {
-          const scroll_position = $(window).scrollTop();
-          const header_position_right = window_width - window_width * (scroll_position / document_height);
-          $('.col-1').css({
-            display: 'flex',
-            'left': header_position_right
-          });
-        } else if ($(window).scrollTop() > document_height/2) {
-          console.log('middle');
-        }
-      });
-    });
+    this.headerScroll()
   }
 }

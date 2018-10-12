@@ -10,21 +10,19 @@ export class ScrollComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    $(window).on("scroll", function() {
-      var scrollHeight = $(document).height();
-      var scrollPosition = $(window).height() + $(window).scrollTop();
-      if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-          // when scroll to bottom of the page
-          console.log('bottom!');
+  daScroll() {
+    $(window).scroll(function () {
+      const document_height = $(document).height() - $(window).height();
+      if ($(window).scrollTop() < document_height / 1.5) {
+        $('.container').hide();
+      } else {
+        $('.container').show();
       }
     });
+  }
 
-    $(window).bind('scroll', () => {
-      if (window.scrollY < window.length) {
-        console.log('top!');
-      } 
-    });
+  ngOnInit() {
+    this.daScroll();
   }
 
 }
