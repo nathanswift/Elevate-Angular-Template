@@ -15,6 +15,7 @@ import { ProjectsComponent } from './presentation/projects/projects.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ScrollComponent } from './components/scroll/scroll.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ScrollComponent } from './components/scroll/scroll.component';
     ProjectsComponent,
     NavbarComponent,
     HeaderComponent,
-    ScrollComponent
+    ScrollComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule

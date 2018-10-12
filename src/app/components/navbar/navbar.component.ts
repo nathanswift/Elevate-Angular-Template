@@ -21,12 +21,15 @@ export class NavbarComponent implements OnInit {
       display: 'flex'
     }).animateCss('fadeIn', () => {
       $menu.animate({
-       fontSize: '4.25vh'
+        fontSize: '5vh',
+        width: '100%',
       }, 500);
       $menu.mouseleave(() => {
         $menu.animate({
-          fontSize: '1em'
-         }, 500);
+          fontSize: '1em',
+          textAlign: 'center',
+          background: '#fff'
+        }, 500);
         $menu.animateCss('fadeOut', () => {
           $('#navbar-logo').fadeIn();
           $menu.css({
@@ -67,7 +70,7 @@ export class NavbarComponent implements OnInit {
       } else if (this.scrolled) {
         this.scrolled = false;
       }
-    }, 1000);
+    }, 750);
   }
 
 }

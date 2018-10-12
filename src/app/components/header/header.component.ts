@@ -3,7 +3,7 @@ import $ from 'jquery';
 import { BoundText, transformAll } from '@angular/compiler/src/render3/r3_ast';
 import { TranslationWidth } from '@angular/common';
 import { resetApplicationState } from '@angular/core/src/render3/instructions';
-import { endianness } from 'os';
+
 
 @Component({
   selector: 'app-header',
