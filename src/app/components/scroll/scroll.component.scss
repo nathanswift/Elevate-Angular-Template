@@ -17,9 +17,10 @@ div {
 
 p {
   position: absolute;
-  margin-top: 70px;
+  margin-top: 65px;
+  font-size: .9em;
   color: $white;
-  width: 150px;
+  width: 200px;
   text-align: center;
   animation: 'pulse' 2s infinite;
 }

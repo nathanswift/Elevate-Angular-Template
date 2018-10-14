@@ -13,7 +13,7 @@ export class ScrollComponent implements OnInit {
   daScroll() {
     $(window).scroll(function () {
       const document_height = $(document).height() - $(window).height();
-      if ($(window).scrollTop() < document_height / 1.5) {
+      if ($(window).scrollTop() < document_height / 2) {
         $('.container').hide();
       } else {
         $('.container').show();
