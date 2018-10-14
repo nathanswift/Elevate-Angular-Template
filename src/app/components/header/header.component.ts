@@ -12,10 +12,36 @@ import { resetApplicationState } from '@angular/core/src/render3/instructions';
 })
 export class HeaderComponent implements OnInit {
 
+  name = 'Nathan Swift';
+
+  adj = '';
+  adjs = ['Creative', 'Invested', 'Solution Oriented', 'Detailed', 'Expansive'];
+  currentAdj = 0;
+
+  noun = '';
+  nouns = ['Musician', 'Artist', '& Mindful', 'Developer', 'Adventurer'];
+  currentNoun = 0;
+
+
   scrolled: boolean = false;
   count: number = 0;
 
-  constructor() { }
+  constructor() {
+    this.setWords();
+    setInterval(() => {
+      this.currentAdj++;
+      this.currentNoun++;
+      if (this.currentAdj === this.adjs.length) this.currentAdj = 0;
+      if (this.currentNoun === this.nouns.length) this.currentNoun = 0;
+      this.setWords();
+    }, 3500);
+  }
+
+  setWords() {
+    this.adj = this.adjs[this.currentAdj];
+    this.noun = this.nouns[this.currentNoun];
+  }
+
 
   follow() {
     $(document).mousemove(function (e) {
@@ -42,7 +68,7 @@ export class HeaderComponent implements OnInit {
           display: 'flex',
           'left': header_position_right
         });
-      } 
+      }
     });
   }
 

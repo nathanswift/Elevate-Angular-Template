@@ -6,13 +6,13 @@
   position: fixed;
   top: 40%;
   right: 30%;
-  text-align: center; 
+  text-align: center;
   justify-content: center;
   vertical-align: center;
   transform-origin: left;
   transform: scale(.9) rotateZ(-45deg);
-  width: 600px;
-  height: 200px;
+  width: 550px;
+  height: 250px;
   margin: 0px;
   cursor: pointer;
 
@@ -20,46 +20,50 @@
     cursor: pointer;
     z-index: 1;
     transform: skew(200.25deg);
-    background: rgba(15, 15, 15, .3);
     border: $dark;
     color: $dark;
     transform: scale(1.2)
   }
 
   .box {
-    border: 1px $light solid;
+    border: 2px $light solid;
     flex: 1;
   }
 
   #box-1 {
-    transform: scale(1.5, 1.5)
+    transform: scale(1.5, 1.5);
+    border-left: $white;
+    border-bottom: $white;
   }
 
   #box-2 {
-    transform: scale(.5, .5) translate(0px, 200px);
+    transform: scale(.65, .65) translate(-30px, -275px);
+    border: 4px $light solid;
+    border-bottom: $white;
+    border-left: $white;
   }
 
   #box-3 {
-    transform: scale(.5, .5) translate(0px, -200px);
+    transform: scale(.65, .65) translate(25px, 125px);
+    border: 4px $light solid;
+    border-bottom: $white;
+    border-left: $white;
   }
 
-  h2, p {
+  h2,
+  h3 {
     color: $white;
   }
 
-  h2:hover,
-  p:hover {
-    color: $light;
-  }
-
   h2 {
-    font-size: 32pt;
-    transform: rotateZ(45deg) scale(.75) translate(10px, 27.5px)
+    font-size: 34pt;
+    transform: rotateZ(45deg) scale(.75) translate(20px, 20px)
   }
 
-  p {
+  h3 {
     display: table;
-    transform: rotateZ(45deg) scale(.65) translate(-50px, -125px);
+    margin-bottom: 50px;
+    transform: rotateZ(45deg) scale(.5) translate(-50px, -125px);
   }
 
   .later {
@@ -67,12 +71,20 @@
   }
 
   h1 {
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: -.01em;
+    line-height: .95em;
+    font-size: 3em;
+    padding-right: 20px;
     color: $white;
-    transform: rotateZ(45deg) scale(1) translate(-20px, 0px);
-    width: 50%;
-    height: 75%;
+    transform: rotateZ(35deg) scale(1) translate(-20px, 0px);
+    width: 60%;
+    height: 65%;
+    margin-top: 10px;
+    margin-left: 40px;
+    text-align: center;
   }
-  
+
   h1:hover {
     color: $dark * .2;
   }

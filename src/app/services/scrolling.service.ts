@@ -5,8 +5,7 @@ export function scrolling() {
     const scrollHeight = $(document).height();
     const scrollPosition = $(window).height() + $(window).scrollTop();
     if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-      // when scroll to bottom of the page
-      console.log('bottom!');
+      $(this).remove();
     }
   });
 
